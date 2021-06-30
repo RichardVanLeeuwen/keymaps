@@ -14,18 +14,13 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-
-
 #pragma once
 
-
 #define USE_SERIAL
-
-// #define SPLIT_USB_DETECT
-// #define SPLIT_USB_TIMEOUT 1000
-// #define MASTER_LEFT
-// #define MASTER_RIGHT
 #define EE_HANDS
-// Rows are doubled-up
+
+#define TAPPING_TERM 200
+#define IGNORE_MOD_TAP_INTERRUPT
+
 
 // qmk flash -kb handwired/dactyl_manuform/5x6 -km RichardVanLeeuwen -bl avrdude-split-left
