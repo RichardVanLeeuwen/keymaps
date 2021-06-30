@@ -1,4 +1,4 @@
-/* My personal layout for the Dactyl Manuform 5x6 Keyboard */ 
+/* My personal layout for the Dactyl Manuform 5x6 Keyboard */
 // Made for use with windows.
 // qmk compile -km DrezaemLeft
 // qmk flash -kb handwired/dactyl_manuform/5x6 -km DrezaemLeft -bl avrdude-split-left
@@ -16,13 +16,15 @@
 #define SFT_T RSFT_T(KC_T)
 #define ALT_N LALT_T(KC_N)
 #define GUI_S RGUI_T(KC_S)
+#define MOUS_SPC LT(_MOUSE, KC_SPC)
 
 #define _DVORAK 0
 #define _QWERTY 1
 #define _HOMEMOD 2
-#define _MACROL 3
-#define _LOWER 4
-#define _RAISE 5
+#define _MOUSE 3
+#define _MACROL 4
+#define _LOWER 5
+#define _RAISE 6
 
 #define DVORAK DF(_DVORAK)
 #define QWERTY DF(_QWERTY)
@@ -61,9 +63,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      _______ , GUI_A    ,  ALT_O   , SFT_E    , CTL_U    , _______  ,                         _______  , CTL_H    , SFT_T    , ALT_N    , GUI_S    ,_______,
      _______ , _______  , _______  , _______  , _______  , _______  ,                         _______  , _______  , _______  , _______  , _______  ,_______,
                      _______,_______,                                                         _______  , _______,
-                                      _______,_______,                        _______,_______,
-                                      _______,_______,                        _______, _______,
-                                      _______ ,_______,                        _______, _______
+                                      _______ ,MOUS_SPC,                        _______,_______,
+                                      _______ ,_______ ,                        _______, _______,
+                                      _______ ,_______ ,                        _______, _______
   ),
 
   [_MACROL] = LAYOUT_5x6(
@@ -72,6 +74,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      _______ , KC_CAPS  , _______  , _______  , _______  , _______  ,                         _______  , _______  , _______  , _______  , _______  ,_______,
       GMAIL  , _______  , HOMEMOD   , _______  , _______  , _______  ,                         _______  , _______  , _______  , _______  , _______  ,_______,
                      DVORAK,QWERTY,                                                        _______ ,_______,
+                                      _______,_______,                        _______,_______,
+                                      _______,_______,                        _______, _______,
+                                      _______,_______,                        _______, _______
+  ),
+
+  [_MOUSE] = LAYOUT_5x6(
+     _______ , _______  , _______  , _______  , _______  , _______  ,                         _______  , _______  , _______  , _______  , _______  ,_______,
+     _______ , _______  , _______  , _______  , _______  ,_______    ,                         _______  , _______  , KC_MS_U  , _______  , KC_WH_U  ,_______,
+     _______ , _______  , _______  , _______  , _______  , _______  ,                         _______  , KC_MS_L, KC_MS_D  , KC_MS_R  , KC_WH_D ,_______,
+     _______ , _______  , _______   , _______  , _______  , _______  ,                         _______  , _______  , _______  , _______  , _______  ,_______,
+                     _______,_______,                                                                                _______ ,_______,
                                       _______,_______,                        _______,_______,
                                       _______,_______,                        _______, _______,
                                       _______,_______,                        _______, _______
