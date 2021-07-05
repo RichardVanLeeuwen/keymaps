@@ -12,7 +12,7 @@
 #define GUI_U LGUI_T(KC_U)
 // Home row mod keys Right
 #define GUI_H RGUI_T(KC_H)
-#define SFT_T RSFT_T(KC_T)
+#define SHFT_T RSFT_T(KC_T)
 #define ALT_N LALT_T(KC_N)
 #define CTL_S RCTL_T(KC_S)
 #define MOUS_SPC LT(_MOUSE, KC_SPC)
@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_HOMEMOD] = LAYOUT_5x6(
     _______ ,_______  ,_______  ,_______  ,_______  ,_______  ,                        _______  ,_______ ,_______  ,_______  ,_______  ,_______,
     _______ ,_______  ,_______  ,_______  ,_______  ,_______  ,                        _______  ,_______ ,_______  ,_______  ,_______  ,_______,
-    _______ , CTL_A   , ALT_O   , SFT_E   , GUI_U   ,_______  ,                        _______  , GUI_H  , SFT_T   , ALT_N   , CTL_S   ,_______,
+    _______ , CTL_A   , ALT_O   , SFT_E   , GUI_U   ,_______  ,                        _______  , GUI_H  , SHFT_T   , ALT_N   , CTL_S   ,_______,
     _______ ,_______  ,_______  ,_______  ,_______  ,_______  ,                        _______  ,_______ ,_______  ,_______  ,_______  ,_______,
                     _______,_______,                                                        _______  , _______,
                                     _______,MOUS_SPC,                        _______,_______,
